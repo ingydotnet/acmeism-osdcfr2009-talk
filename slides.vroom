@@ -52,21 +52,35 @@ OSDC.fr - 2 October 2009 - Paris
 * YAML::Perl
   * Python, Perl
 
+  -- There's a theme to this work...
+
 ----
 == So What is Acmeism??
 
-+* It's a word I made up.
-+* It's a word that I own stock in.
++* It's a word I made up
++* To describe the theme to my programming ideas
++* It's a word that I own stock in
   * acmeism.(com|org|net)
-+* It's a defunct Russian Poetry Movement.
+  * http://google.com
++* It's a defunct Russian Poetry Movement
   * 1910-1912 in St Petersburg
-+* It's a nod to "the best" Perl modules.
++* It's a nod to "the best" Perl modules
   * like Acme::Bleach
   * and Acme::Scurvy::Whoreson::BilgeRat::Backend::pirate
 
-+* I noticed a theme to my programming interests
++* I noticed a theme to my programming ideas
 * I decided to call it "Acmeism"
   
+----
+== Plats du Jour
+
+* Acmeism - A new religion
+* Vroom - This slide software
+* GitHub - My Acmeist garbage dump
+* YAML - A data serialization language
+* TestML - A new unit test language
+* C'Dent - A new programming language
+
 ----
 == The 10 Rules of Acmeism
 
@@ -81,11 +95,14 @@ The first rule of Acmeism is:
 
 1) All programming languages are the same
 2) Programming languages never die
-3) Programming languages divide programmers
+
++3) Programming languages divide programmers
 4) Programmer communities need to be united
+
 +5) Modules are the key to good programming
 6) Modules need to be shared (ported) across languages
-+7)
+
++7) ... under construction ...
 8)
 9)
 10)
@@ -106,7 +123,23 @@ The first rule of Acmeism is:
   * Languages are BARRIERS
 
 ----
-== Proof
+== The OSCON Languages
+
+* Acmeism is in *theory* about all programming languages
+* In *practice* it is about:
+
+  * Perl
+  * Python
+  * Ruby
+  * PHP
+  * JavaScript
+
+* These are the languages of OSDC!
+* They are the languages of O'Reilly
+* They are the languages of JSON and YAML
+
+----
+== Proof of Acmeism
 
 The following is a simple program that takes an object and uses
 YAML to dump it, load the result and dump it again. It compares
@@ -115,6 +148,7 @@ the two dumps to see if they are equal.
 This program is written in 6 different languages.
 
 ---- include yaml-examples
+
 ----
 == Languages never die!
 
@@ -132,36 +166,205 @@ This program is written in 6 different languages.
 
 * Programming languages never die
 * In fact, they breed
-  * Even Ingy is making a new one!
+* Even during OSDC talks!
 
 ----
-== Points
+== Modules, Modules, Modules
 
-- Experience from YAML::Perl project.
-- Experience from pQuery
-- TestML - Tests prove correctness of porting
-  - TestML is key to Acmeism
-- testml.org/spec
-- Modules are the common greatness to modern programming
-  - Modules can be implemented in a simple (portable) subset of a language
-  - Modules are the integrated circuits of software
-- How Acmeism was derived from YAML and PyYaml
+* Modules are the integrated circuits of software
+* All Acmeist languages have great module support
+* Great modules should be ported to all Acmeist languages
+* Modules can use simple, portable code
+* Modules should have common tests
 
-- YAML
-- JSON
-- TestML
-- C'Dent
-- Rx
+----
+== Perl 5 and Perl 6
 
-- JSON is YAML
-- YAML adds types, references etc
-- Show how Test::Base led to TestML
-- GitHub and Acmeism -pm -rb etc
-- JSON is very simple
-- YAML is complete (complex keys)
-- JSON is verbose syntax
-- YAML is clean syntax
+* Rakudo is the new Perl 6 engine
+* Perl 6 is vastly different from Perl 5
+* All the good modules need to be rewritten
+* It would be great if they passed the same tests
+* 
 
+----
+== Acmeist Technologies
+
+* XML?
+* YAML
+* JSON
+* Rx
+
+----
+
+== YAML Ain't Markup Language
+
+Q: What is YAML?
++A: YAML is a Serialization Language
+
+From Wikipedia:
+
+    * XML  is a ... MARKUP LANGUAGE...
+    * JSON is a ... DATA INTERCHANGE FORMAT
+    * YAML is a ... DATA SERIALIZATION FORMAT
+
++   YAML is THE ONLY interlingual *Data Serialization* Language.
+
+    [ Ruby, Perl, Python, PHP, Java, Haskell, JavaScript ]
+
+----
+== YAML and JSON
+
+* JSON has a simple Data Model
+
+* Mappings/Hashes/Dictionaries (w/ string keys)
+* Sequences/Arrays/Lists
+* Scalars (Strings, Numbers, Boolean, Null)
+
++* YAML has the same data model
+
+* Add types
+* Add references
+* Add complex keys
+
++* This is the "Acmeist Data Model"
+
+----
+        JSON Model Grammar
+
+    JSON   := (MAP | ARRAY)
+    NODE   := (MAP | ARRAY | SCALAR)
+    MAP    := (STRING, NODE)*
+    ARRAY  := NODE*
+    SCALAR := (string | number | boolean | null)
+
++        YAML Model Grammar
+
+    YAML := NODE*
+    NODE := (typed)(MAP | ARRAY | SCALAR | ALIAS)
+    MAP := (NODE, NODE)*
+    ARRAY := NODE*
+    SCALAR := typed_string
+
+
+----
+== Introduction to YAML by Examples
+
+---- yaml,i4
+# Example 1
+--- !
+  ? ~: #
+  : &_ '''
+{@#$%}'#: *++
+  [_: ^^]: ...
+
+---- perl,i4
+# Obfuscated YAML, FTW!
+$VAR1 = bless( {
+                 'ARRAY(0x80f640)' => '...',
+                 'HASH(0x80f5b0)' => '\' {@#$%}'
+               }, 'main' );
+
+----
+== All JSON is YAML
+
+* JSON is a pure subset of YAML
+
+{"JSON": "Data Interchange", "YAML": "Data Serialization",
+"Features": ["Simple", "Sharable"]
+
++JSON: Data Interchange
+YAML: Data Serialization
+Features: [Simple, Sharable]
+
++JSON: Data Interchange
+YAML: Data Serialization
+Features: 
+- Simple
+- Sharable
+
+----
+== YAML - The Book
+
+* I am writing an O'Reilly book on YAML
+* Available in early 2010
+
+----
+== YAML and Acmeism
+
+* YAML is hard to implement
+  * Ingy has failed more than once
+* It has a 7 layer stack (in both directions)
+* PyYaml is the reference implemenation
+  * Kirill Siminov
+* Ported to C - libyaml
+* Ported to Ruby and Java
+* Ported to Perl by Ingy
+
+* This gave birth to:
+  * Acmeism
+  * TestML
+  * C'Dent
+
+----
+== YAML Porting
+
+* Compare PyYaml vs YAML::Perl modules.
+
+----
+== TestML
+
+* JSON implementations should pass the same tests
+* YAML implementations should pass the same tests
+* Rx implementations should...
+
+* Perl 5 modules ported to Perl 6...
+* Anything ported to anything!
+
++* Things that pass the same tests are the same...
+* If not...
+* Write more tests!
+
+----
+== TestML
+
+* TestML is a data driven unit test language
+* It is programming language agnostic
+* It is the foundation of Acmeism
+* Necessary predecessor to C'Dent
+
+* http://testml.org
+
+----
+== C'Dent
+
+* C'Dent is a new programming language
+* Built out of old ones
+* It is a module porting language
+* WOUE - Write Once, Upload Everywhere
+
+----
+== GitHub
+
+* All my public work is on GitHub
+* INCLUDING THIS TALK
+
+        http://github.com/ingydotnet/
+
+* Many Acmeist projects
+* Most repositories have an extension
+  * -pm -> Perl
+  * -py -> Python
+  * -js -> JavaScript
+  * -cd -> C'Dent
+  * -tml -> TestML Suites
+  * ->talk -> Presentations like this one
+
+----
+== GitHub gh-pages
+
+* GitHub gh-pages branches give you a project website
+
+    http://ingydotnet.github.com/acmeism-osdcfr2009-talk/
 
 ---- center
 The End
