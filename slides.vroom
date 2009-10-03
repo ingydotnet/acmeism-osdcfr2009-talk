@@ -52,6 +52,7 @@ OSDC.fr - 2 October 2009 - Paris
 * YAML::Perl
   * Python, Perl
 
+
   -- There's a theme to this work...
 
 ----
@@ -61,7 +62,6 @@ OSDC.fr - 2 October 2009 - Paris
 +* To describe the theme to my programming ideas
 +* It's a word that I own stock in
   * acmeism.(com|org|net)
-  * http://google.com
 +* It's a defunct Russian Poetry Movement
   * 1910-1912 in St Petersburg
 +* It's a nod to "the best" Perl modules
@@ -81,6 +81,7 @@ OSDC.fr - 2 October 2009 - Paris
 * GitHub - My Acmeist garbage dump
 * Vroom - This slide software
 
+As you will see, all of these dishes are intertwingled
 ----
 == The 10 Rules of Acmeism
 
@@ -110,13 +111,13 @@ The first rule of Acmeism is:
 ----
 == All languages are the same!
 
-* Natural languages are how people communicate with people
+* Natural language -> people talk to people
   * Français, English, 中文
   * The people and ideas are all the same
 * Tower of Babel
   * Language is a barrier
 
-+* Computer languages are how people communicate with computers
++* Computer language -> people talk to computers
   * Python, Ruby, Perl, PHP, Java
   * The programmers and ideas are all the same
 * Tower of OSDC
@@ -138,6 +139,8 @@ The first rule of Acmeism is:
 * They are the languages of O'Reilly
 * They are the languages of JSON and YAML
 
+* They are the languages of Acmeism
+
 ----
 == Proof of Acmeism
 
@@ -152,7 +155,7 @@ This program is written in 6 different languages.
 ----
 == Languages never die!
 
-* Maybe everyone in the world should use one language.
+* Maybe everyone in the world should use one language?
   * Français??
   * English??
   * 中文??
@@ -162,9 +165,11 @@ This program is written in 6 different languages.
 * Someone asked me, "Isn't Perl dead?"
 +   * NO WAY!
    * YAPC::*
-* COBOL jobs are still available!
+   * CPAN
+   * Jobs!
++* COBOL jobs are still available!
 
-* Programming languages never die
++* Programming languages never die
 * In fact, they breed
 * Even during OSDC talks!
 
@@ -184,7 +189,6 @@ This program is written in 6 different languages.
 * Perl 6 is vastly different from Perl 5
 * All the good modules need to be rewritten
 * It would be great if they passed the same tests
-* 
 
 ----
 == Acmeist Technologies
@@ -193,6 +197,7 @@ This program is written in 6 different languages.
 * YAML
 * JSON
 * Rx
+* What else?
 
 ----
 
@@ -247,7 +252,7 @@ From Wikipedia:
 
 
 ----
-== Introduction to YAML by Examples
+== YAML syntax by Examples
 
 ---- yaml,i4
 # Example 1
@@ -270,7 +275,7 @@ $VAR1 = bless( {
 * JSON is a pure subset of YAML
 
 {"JSON": "Data Interchange", "YAML": "Data Serialization",
-"Features": ["Simple", "Sharable"]
+"Features": ["Simple", "Sharable"]}
 
 +JSON: Data Interchange
 YAML: Data Serialization
@@ -294,8 +299,8 @@ Features:
 * YAML is hard to implement
   * Ingy has failed more than once
 * It has a 7 layer stack (in both directions)
-* PyYaml is the reference implemenation
-  * Kirill Siminov
+* PyYaml is the reference implementation
+  * Kirill "Amadeus" Siminov
 * Ported to C - libyaml
 * Ported to Ruby and Java
 * Ported to Perl by Ingy
@@ -314,9 +319,9 @@ Features:
 * ../yaml-perl-pm/lib/YAML/Perl/Parser.pm
 
 ---- center
-TestML
+YAML
 
-Any Questions
+Any Questions?
 
 ----
 == TestML
@@ -329,7 +334,7 @@ Any Questions
 * Anything ported to anything!
 
 +* Things that pass the same tests are the same...
-* If not...
++* If not...
 * Write more tests!
 
 ----
@@ -407,28 +412,43 @@ foo: bar
 * Everything lowercase is implementation provided
 * "Bridge" classes hook tests to code being tested
 
+* TestML should work with any existing Test framework
+  * One Runner class per framework
+
+---- include grammar.yaml
+
+----
+== Porting TestML
+
+* Turn Spec into YAML
+* Turn YAML into native code
+* Parser uses native code grammar
+* Port 6 or 7 classes
+* Create a runner for a framework
+* Get all common TestML .tml tests to pass!
+
 ---- center
 TestML
 
-Any Questions
+Any Questions?
 
 ----
 == C'Dent
 
 * C'Dent is a new programming language
-* Built out of old ones
-* It is a module porting language
-* WOUE - Write Once, Upload Everywhere
-* C'Dent is Parrot inside out
-* C'Dent lets you start with your favorite Acmeist Language
-* And then compile to the others
-* TestML makes sure that all the outputs work
-* C'Dent is the language of Acmeism
-* Named after Chris Dent
-* also acronym for Common DENominaTor
-* Not entirely sure it will work :)
-
-* http://cdent.org
++* Built out of old ones
++* It is a module porting language
++* WOUE - Write Once, Upload Everywhere
++* C'Dent is Parrot inside out
++* C'Dent lets you start with your favorite Acmeist Language
++* And then compile to the others
++* TestML makes sure that all the outputs work
++* C'Dent is the language of Acmeism
++* Named after Chris Dent
++* also acronym for "Common DENominaTor"
++* Not entirely sure it will work :)
++
++* http://cdent.org
 
 ----
 == How to build C'Dent
@@ -470,7 +490,7 @@ Any Questions
 ---- center
 C'Dent
 
-Any Questions
+Any Questions?
 ----
 == GitHub
 
@@ -501,6 +521,7 @@ Any Questions
 * For 5 years I wrote new slide software for every talk
 * Then I wrote Vroom
 * Vroom is slides in Vim
+* So simple and connected to hacking environment
 * This talk uses the fancy MacVim
 * Vroom is available ad vroom-pm on GitHub
 
