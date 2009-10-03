@@ -75,11 +75,11 @@ OSDC.fr - 2 October 2009 - Paris
 == Plats du Jour
 
 * Acmeism - A new religion
-* Vroom - This slide software
-* GitHub - My Acmeist garbage dump
 * YAML - A data serialization language
 * TestML - A new unit test language
 * C'Dent - A new programming language
+* GitHub - My Acmeist garbage dump
+* Vroom - This slide software
 
 ----
 == The 10 Rules of Acmeism
@@ -310,6 +310,14 @@ Features:
 
 * Compare PyYaml vs YAML::Perl modules.
 
+* ../pyyaml/lib/yaml/parser.py
+* ../yaml-perl-pm/lib/YAML/Perl/Parser.pm
+
+---- center
+TestML
+
+Any Questions
+
 ----
 == TestML
 
@@ -335,13 +343,134 @@ Features:
 * http://testml.org
 
 ----
+== TestML and Test::Base
+
+* TestML evolved from Test::Base
+* Test::Base was data driven unit tests for Perl
+  * Poorly named
+* Test.Base was ported to JavaScript
+* TestML is for all Acmeist Languages
+
+---- perl
+use Test::YAML tests => 4;      # subclass of Test::Base
+
+filter {
+    yaml => 'load_obj',
+    perl => 'dump_obj',
+};
+
+run_is yaml => 'perl';
+run_is perl => 'yaml';
+
+__DATA__
+=== A hash
+--- perl
+{ foo => 'bar'}
+--- yaml
+foo: bar
+
+=== An array
+--- perl
+[ 2, 4, 42 ]
+--- yaml
+- 2
+- 4
+- 42
+
+----
+%TestML: 1.0
+%Plan: 4
+
+
+$yaml.load() == $perl;
+$perl.dump() == $yaml;
+
+
+=== A hash
+--- perl
+{ foo => 'bar'}
+--- yaml
+foo: bar
+
+=== An array
+--- perl
+[ 2, 4, 42 ]
+--- yaml
+- 2
+- 4
+- 42
+
+----
+== TestML
+
+* Everything uppercase is defined by TestML
+* Everything lowercase is implementation provided
+* "Bridge" classes hook tests to code being tested
+
+---- center
+TestML
+
+Any Questions
+
+----
 == C'Dent
 
 * C'Dent is a new programming language
 * Built out of old ones
 * It is a module porting language
 * WOUE - Write Once, Upload Everywhere
+* C'Dent is Parrot inside out
+* C'Dent lets you start with your favorite Acmeist Language
+* And then compile to the others
+* TestML makes sure that all the outputs work
+* C'Dent is the language of Acmeism
+* Named after Chris Dent
+* also acronym for Common DENominaTor
+* Not entirely sure it will work :)
 
+* http://cdent.org
+
+----
+== How to build C'Dent
+
+* Define a common AST that contains all the information to generate:
+* Perl, Python, Ruby, JavaScript output
+* Make a syntax to compile to the AST
+* Why not use the same languages?
+* Use Haskell to write the compilers
+* Inputs need to be strongly typed
+* Outputs can include Java and Haskell and even C
+
+----
+== C'Dent is Strongly Typed
+
+    # python
+    if x == 'foo' or y == 42:
+        print "Hello",
+
+    #perl
+    if ($x eq 'foo' or $y == 42) {
+        print "Hello";
+    }
+
+* You need type info for code generation
+* Acmeist languages are not strongly type
+* Haskell shows that "type inference" is possible
+* C'Dent uses a tight subset of the Acmemist languages
+
+----
+== C'Dent Timeline
+
+* C'Dent is not yet started
+* Ingy needs to finish YAML and TestML stuff first
+* If you are interested, please help:
+  * TestML ports
+  * C'Dent bootstrap
+
+---- center
+C'Dent
+
+Any Questions
 ----
 == GitHub
 
@@ -365,6 +494,15 @@ Features:
 * GitHub gh-pages branches give you a project website
 
     http://ingydotnet.github.com/acmeism-osdcfr2009-talk/
+
+----
+== Vroom
+
+* For 5 years I wrote new slide software for every talk
+* Then I wrote Vroom
+* Vroom is slides in Vim
+* This talk uses the fancy MacVim
+* Vroom is available ad vroom-pm on GitHub
 
 ---- center
 The End
