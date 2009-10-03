@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>028z</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "028b" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "029" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+                           All JSON is YAML
+     
+     * JSON is a pure subset of YAML
+     
+     {&quot;JSON&quot;: &quot;Data Interchange&quot;, &quot;YAML&quot;: &quot;Data Serialization&quot;,
+     &quot;Features&quot;: [&quot;Simple&quot;, &quot;Sharable&quot;]
+     
+     JSON: Data Interchange
+     YAML: Data Serialization
+     Features: [Simple, Sharable]
+     
+     JSON: Data Interchange
+     YAML: Data Serialization
+     Features: 
+     - Simple
+     - Sharable
+
+
+
+
+
+
+</pre>
+</body>

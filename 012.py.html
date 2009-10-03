@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>013.php</title>
+<title>012.py</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>
 function navigate(e) {
@@ -8,11 +8,11 @@ function navigate(e) {
         ? e.keyCode
         : e.which;
     if (keynum == 8) {
-        window.location = "012.rb" + ".html";
+        window.location = "011" + ".html";
         return false;
     }
     if (keynum == 13 || keynum == 32) {
-        window.location = "014.java" + ".html";
+        window.location = "013.pl" + ".html";
         return false;
     }
     if (keynum == 73 || keynum == 105) {
@@ -24,31 +24,31 @@ function navigate(e) {
 </script>
 </head>
 <body onkeypress="return navigate(event)">
-<pre>     &lt;?php
+<pre>
+
+     import yaml
      
-     include(&quot;spyc.php&quot;);
-     
-     $object1 = array(
-         'name' =&gt; 'Ingy dot Net',
-         'number' =&gt; 42,
-         'needs' =&gt; array(
+     object1 = {
+         'name': 'Ingy dot Net',
+         'number': 42,
+         'needs': [
              'sex',
              'drugs',
              'rock and roll'
-         )
-     );
-     
-     $yaml1 = Spyc::YAMLDump($object1);
-     $object2 = Spyc::YAMLLoad($yaml1);
-     $yaml2 = Spyc::YAMLDump($object2);
-     
-     if ($yaml1 == $yaml2) {
-         echo $yaml1;
-     }
-     else {
-         throw new Exception($yaml1 . &quot;!=\n&quot; . $yaml2);
+         ]
      }
      
-     ?&gt;
+     yaml1 = yaml.dump(object1)
+     object2 = yaml.load(yaml1)
+     yaml2 = yaml.dump(object2)
+     
+     if yaml1 == yaml2:
+         print yaml1
+     else:
+         raise Exception(yaml1 + &quot;!=\n&quot; + yaml2)
+
+
+
+
 </pre>
 </body>

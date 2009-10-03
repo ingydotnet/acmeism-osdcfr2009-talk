@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>016c</title>
+<title>024</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>
 function navigate(e) {
@@ -8,11 +8,11 @@ function navigate(e) {
         ? e.keyCode
         : e.which;
     if (keynum == 8) {
-        window.location = "016b" + ".html";
+        window.location = "023z" + ".html";
         return false;
     }
     if (keynum == 13 || keynum == 32) {
-        window.location = "016z" + ".html";
+        window.location = "024z" + ".html";
         return false;
     }
     if (keynum == 73 || keynum == 105) {
@@ -27,16 +27,16 @@ function navigate(e) {
 <pre>
 
 
-                         Languages never die!
+
+             JSON Model Grammar
      
-     * Maybe everyone in the world should use one language.
-       * Français??
-       * English??
-       * 中文??
-     * NO WAY!
+         JSON   := (MAP | ARRAY)
+         NODE   := (MAP | ARRAY | SCALAR)
+         MAP    := (STRING, NODE)*
+         ARRAY  := NODE*
+         SCALAR := (string | number | boolean | null)
      
-     * What about programming languages?
-     * Someone asked me, &quot;Isn't Perl dead?&quot;
+
 
 
 
