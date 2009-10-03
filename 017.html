@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>017</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "016z" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "018" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>                                Points
+     
+     - Experience from YAML::Perl project.
+     - Experience from pQuery
+     - TestML - Tests prove correctness of porting
+       - TestML is key to Acmeism
+     - testml.org/spec
+     - Modules are the common greatness to modern programming
+       - Modules can be implemented in a simple (portable) subset of a language
+       - Modules are the integrated circuits of software
+     - How Acmeism was derived from YAML and PyYaml
+     
+     - YAML
+     - JSON
+     - TestML
+     - C'Dent
+     - Rx
+     
+     - JSON is YAML
+     - YAML adds types, references etc
+     - Show how Test::Base led to TestML
+     - GitHub and Acmeism -pm -rb etc
+     - JSON is very simple
+     - YAML is complete (complex keys)
+     - JSON is verbose syntax
+     - YAML is clean syntax
+</pre>
+</body>
