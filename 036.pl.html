@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>006</title>
+<title>036.pl</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>
 function navigate(e) {
@@ -8,11 +8,11 @@ function navigate(e) {
         ? e.keyCode
         : e.which;
     if (keynum == 8) {
-        window.location = "005z" + ".html";
+        window.location = "035" + ".html";
         return false;
     }
     if (keynum == 13 || keynum == 32) {
-        window.location = "007" + ".html";
+        window.location = "037" + ".html";
         return false;
     }
     if (keynum == 73 || keynum == 105) {
@@ -24,30 +24,30 @@ function navigate(e) {
 </script>
 </head>
 <body onkeypress="return navigate(event)">
-<pre>
-
-
-
-
-
-
-                            Plats du Jour
+<pre>     use Test::YAML tests =&gt; 4;      # subclass of Test::Base
      
-     * Acmeism - A new religion
-     * YAML - A data serialization language
-     * TestML - A new unit test language
-     * C'Dent - A new programming language
-     * GitHub - My Acmeist garbage dump
-     * Vroom - This slide software
+     filter {
+         yaml =&gt; 'load_obj',
+         perl =&gt; 'dump_obj',
+     };
      
-     As you will see, all of these dishes are intertwingled
-
-
-
-
-
-
-
+     run_is yaml =&gt; 'perl';
+     run_is perl =&gt; 'yaml';
+     
+     __DATA__
+     === A hash
+     --- perl
+     { foo =&gt; 'bar'}
+     --- yaml
+     foo: bar
+     
+     === An array
+     --- perl
+     [ 2, 4, 42 ]
+     --- yaml
+     - 2
+     - 4
+     - 42
 
 
 </pre>

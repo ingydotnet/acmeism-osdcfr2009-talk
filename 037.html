@@ -8,7 +8,11 @@ function navigate(e) {
         ? e.keyCode
         : e.which;
     if (keynum == 8) {
-        window.location = "036" + ".html";
+        window.location = "036.pl" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "038" + ".html";
         return false;
     }
     if (keynum == 73 || keynum == 105) {
@@ -21,27 +25,27 @@ function navigate(e) {
 </head>
 <body onkeypress="return navigate(event)">
 <pre>
-
-
-
-
-
-
-
-
-                               The End
-
-                            Any Questions?
-
-        http://ingydotnet.github.com/acmeism-osdcfr2009-talk/
-
-
-
-
-
-
-
-
+     %TestML: 1.0
+     %Plan: 4
+     
+     
+     $yaml.load() == $perl;
+     $perl.dump() == $yaml;
+     
+     
+     === A hash
+     --- perl
+     { foo =&gt; 'bar'}
+     --- yaml
+     foo: bar
+     
+     === An array
+     --- perl
+     [ 2, 4, 42 ]
+     --- yaml
+     - 2
+     - 4
+     - 42
 
 
 

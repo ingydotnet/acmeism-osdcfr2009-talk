@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>044</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function navigate(e) {
+    var keynum = (window.event) // IE
+        ? e.keyCode
+        : e.which;
+    if (keynum == 8) {
+        window.location = "043" + ".html";
+        return false;
+    }
+    if (keynum == 13 || keynum == 32) {
+        window.location = "045" + ".html";
+        return false;
+    }
+    if (keynum == 73 || keynum == 105) {
+        window.location = "index.html";
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body onkeypress="return navigate(event)">
+<pre>
+
+
+
+                       C'Dent is Strongly Typed
+     
+         # python
+         if x == 'foo' or y == 42:
+             print &quot;Hello&quot;,
+     
+         #perl
+         if ($x eq 'foo' or $y == 42) {
+             print &quot;Hello&quot;;
+         }
+     
+     * You need type info for code generation
+     * Acmeist languages are not strongly type
+     * Haskell shows that &quot;type inference&quot; is possible
+     * C'Dent uses a tight subset of the Acmemist languages
+
+
+
+
+
+
+
+</pre>
+</body>
